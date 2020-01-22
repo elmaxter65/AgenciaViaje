@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, minimun-scale=1.0, maximun-scale=1.0">
+  <meta http-equiv='X-UA-Compatible' content='IE=8'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<style>
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 50%;
+  text-align: center;
+  margin-top: 30px;
+   margin-left: auto;
+  margin-right: auto;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+</style>
+
+
+	<!-- Site title
+   ================================================== -->
+	<title>Agencia de Viajes</title>
+	 <meta name="description" content="pagina web en desarrollo.">
+   <link rel="icon" type="image/png" href="images/avion.png">
+
+	<!-- Bootstrap CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Animate CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/animate.css">
+
+	<!-- Font Icons CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/et-line-font.css">
+
+	<!-- Nivo Lightbox CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/nivo-lightbox.css">
+	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+
+	<!-- Owl Carousel CSS
+   ================================================== -->
+   	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+
+	<!-- Main CSS
+   ================================================== -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Google web font 
+   ================================================== -->	
+   <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+	<style>
+   label{
+    width: 150px;
+    display: inline-block;
+   } 
+  </style>
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+<!-- Preloader section
+================================================== -->
+<div  class="preloader">
+
+	<div class="sk-spinner sk-spinner-pulse"></div>
+
+</div>
+
+<!-- LOGO
+<section>
+    <section id="panel">
+      <center>
+          <section id="panel-main">
+            <img id="imgn" src="images/LOGO.png">
+          </section>
+      </center>
+    </section>
+</section>
+-->
+
+
+<!-- Home section
+================================================== -->
+
+<!-- Navigation section
+================================================== -->
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+	<div class="container">
+
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+
+         
+
+			<a href="#" class="navbar-brand">Agencia de Viajes</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#home" class="smoothScroll">INICIO</a></li>
+				<li><a href="#service" class="smoothScroll">PAQUETES</a></li>
+				<li><a href="#portfolio" class="smoothScroll">SOLICITAR COTIZACIÓN</a></li>
+				<li><a href="#contact" class="smoothScroll">QUIENES SOMOS</a></li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+<!--==================================================-->
+
+<section id="portfolio" class="parallax-section">
+  <div class="row">
+
+    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+      <div class="portfolio-thumb">
+        <section id="inicio">
+          <center>
+            <div class="slider">
+              <ul>
+                <li><img src="images\imagenslider/marga1.jpeg"  width="420" height="460"></li>
+                <li><img src="images\imagenslider/marga2.jpeg" width="420" height="460"></li>
+                <li><img src="images\imagenslider/marga3.jpeg" width="420" height="460"></li>
+              </ul>
+            </div>
+          </center>
+        </section>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+      <div class="portfolio-thumb">
+        
+          <center><h4>Consultar aquí o en Contacto y Reserve su Vuelo</h4></center>
+          <form action="formulario.php">
+            <label for="origen">Origen</label>
+            <input type="text" name="origen" id="origen"><br>
+
+            <label for="destino">Destino</label>
+            <input type="text" name="destino" id="destino"><br><br>
+
+            <label for="salida">Fecha Salida</label>
+            <input type="text" name="salida" id="salida"><br>
+
+            <label for="regreso">Fecha Regreso</label>
+            <input type="text" name="regreso" id="regreso"><br><br>
+
+            <label for="pasajeros">Cantidad de Pasajeros</label>
+            <input type="text" name="pasajeros" id="pasajeros"><br>
+
+            <center>....<input type="submit" value="ENVIAR MENSAJE"></center>
+          </form>
+        
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+      <div class="portfolio-thumb">
+        <section id="inicio">
+          <center>
+            <div class="slider">
+              <ul>
+                <li><img src="images\imagenslider/marga1.jpeg"  width="420" height="460"></li>
+                <li><img src="images\imagenslider/marga2.jpeg" width="420" height="460"></li>
+                <li><img src="images\imagenslider/marga3.jpeg" width="420" height="460"></li>
+              </ul>
+            </div>
+          </center>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+      <!-- Seccion de ingresar codigo
+      ================================================== -->
+<article class="box">
+
+         <form class="w3-container">
+          <div class="codigo">
+          <h2>Ingresar codigo para área  vip</h2>
+          <p>Para mayor informacion contactar al administrador</p>
+          </div>
+          <p >
+            <label>ACTIVAR CODIGO</label>
+            <input type="text" value="" required="6" placeholder="" title="CODIGO"/>
+
+            <br/>
+
+          </p>  
+          <div>
+              <a href="#" class="w3-btn w3-blue">INGRESAR</a>
+          </div>    
+      </article>
+
+
+
+<!-- Logo empresa
+================================================== -->
+
+  <section>
+    <center>
+      <section id="info-main">
+        <h3></h3>
+        <img id="inf-img1" src="images/logo empresa1.jpeg">
+      </section>
+    </center>
+  </section>
+
+
+
+
+
+<!-- Service section
+================================================== 
+
+
+================================================== -->
+<section id="team" class="paralla-section">
+	<div class="container">
+		<div class="row">
+
+
+
+<!-- portfolio sectionslider1
+================================================== -->
+<section id="portfolio" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Section title
+			================================================== -->
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 wow bounceIn text-center">
+				<div class="section-title">
+					
+					<h3><p>Busque los precios mas baratos a estos destinos</p><h>
+				</div>
+			</div>
+
+<div id="myNav_marg" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <div class="slider">
+              <ul>
+                <li><img src="images\imagenslider/marga1.jpeg"  width="100" height="100"></li>
+                <li><img src="images\imagenslider/marga2.jpeg" width="100" height="100"></li>
+                <li><img src="images\imagenslider/marga3.jpeg" width="100" height="100"></li>
+              </ul>
+            </div>
+     </div>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()"></span>
+
+
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+				<div class="portfolio-thumb">
+          <img src="images\imagenlogo/logo_marga.jpeg" class="fluid-img" alt="portfolio img" width="356" height="239">
+          <div class="portfolio-overlay">
+            <div class="portfolio-overlay-des">
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">ISLA MARGARITA</span>
+              <div class="letra" > <p><h2> </h2></p>
+              <h5>Incluye acomodación en el hotel</h5>
+              </div>
+            </div>
+          </div>
+          </a>
+        </div>
+			</div>
+
+
+
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+				<div class="portfolio-thumb">
+               		
+               			<img src="images\imagenlogo/logo_islacoche.jpeg" class="fluid-img" alt="portfolio img" width="356" height="239">
+               				<div class="portfolio-overlay">
+               				 	<div class="portfolio-overlay-des">
+                       <span style="font-size:30px;cursor:pointer" onclick="openNav()">ISLA DE COCHE </span>
+              <div class="letra" > <p><h2></h2></p>
+              <h5>Incluye acomodación en el hotel</h5>
+              </div>
+               					</div>
+               				</div>
+               		</a>
+               	</div>
+			</div>
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+				<div class="portfolio-thumb">
+               		
+               			<img src="images\imagenlogo/logo_lecheria.jpeg" class="fluid-img" alt="portfolio img" width="356" height="239">
+               				<div class="portfolio-overlay">
+               				 	<div class="portfolio-overlay-des">
+               						
+                      <span style="font-size:30px;cursor:pointer" onclick="openNav()">LECHERÍA</span>
+              <div class="letra" > <p><h2> </h2></p>
+              <h5>Incluye acomodación en el hotel</h5>
+              </div>
+               					</div>
+               				</div>
+               		</a>
+               	</div>
+			</div>
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+				<div class="portfolio-thumb">
+               		
+               			<img src="images\imagenlogo/logo_puntofijo1.jpeg" class="fluid-img" alt="portfolio img" width="356" height="239">
+               				<div class="portfolio-overlay">
+               				 	<div class="portfolio-overlay-des">
+               						
+                     <span style="font-size:30px;cursor:pointer" onclick="openNav()">PUNTO FIJO</span>
+              <div class="letra" > <p><h2> </h2></p>
+              <h5>Incluye acomodación en el hotel</h5>
+              </div>
+                      
+               					</div>
+               				</div>
+               		</a>
+               	</div>
+			</div>
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+				<div class="portfolio-thumb">
+               		
+               			<img src="images\imagenlogo/logo_tucaca.jpeg" class="fluid-img" alt="portfolio img" width="356" height="239">
+               				<div class="portfolio-overlay">
+               				 	<div class="portfolio-overlay-des">
+               						
+                     <span style="font-size:30px;cursor:pointer" onclick="openNav()">TUCACA</span>
+              <div class="letra" > <p><h2> </h2></p>
+              <h5>Incluye acomodación en el hotel</h5>
+              </div>
+               					</div>
+               				</div>
+               		</a>
+               	</div>
+			</div>
+			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+				<div class="portfolio-thumb">
+               		
+               			<img src="images\imagenlogo/logo_aragua.jpeg" class="fluid-img" alt="portfolio img" width="356" height="239">
+               				<div class="portfolio-overlay">
+               				 	<div class="portfolio-overlay-des">
+               						
+                     <span style="font-size:30px;cursor:pointer" onclick="openNav()">ARAGUA</span>
+              <div class="letra" > <p><h2> </h2></p>
+              <h5>Incluye acomodación en el hotel</h5>
+              </div>
+               					</div>
+               				</div>
+               		</a>
+               	</div>
+			</div>
+			     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="portfolio-thumb" visibility: hidden>
+                  
+                    <img src="images\imagenlogo/logo_aragua.jpeg" class="fluid-img" alt="portfolio img" width="356" height="239">
+                      <div class="portfolio-overlay">
+                        <div class="portfolio-overlay-des">
+                          
+                     <span style="font-size:30px;cursor:pointer" onclick="openNav()"></span>
+              <div class="letra" > <p><h2>ARAGUA1 </h2></p>
+              <h5>Incluye acomodación en el hotel</h5>
+              </div>
+                        </div>
+                      </div>
+                  </a>
+                </div>
+      </div>
+      
+            <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+				<div class="portfolio-thumb">
+               		
+               			<img src="images\imagenlogo/logo_roques.jpeg" class="fluid-img" alt="portfolio img" >
+               				<div class="portfolio-overlay">
+               				 	<div class="portfolio-overlay-des">
+               						
+                     <span style="font-size:30px;cursor:pointer" onclick="openNav()">LOS ROQUES</span>
+              <div class="letra" > <p><h2> </h2></p>
+              <h5>Incluye acomodación en el hotel</h5>
+              </div>
+                      
+               					</div>
+               				</div>
+               		</a>
+               	</div>
+			</div>
+
+
+
+		</div>
+	</div>
+</section>
+
+
+<!-- Faq section
+==================================================
+<section id="faq" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			 Section title
+			================================================== 
+			
+			<div class="col-md-offset-1 col-md-10 col-sm-12 wow fadeInUp" data-wow-delay="0.9s">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  					<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingOne">
+      						<h4 class="panel-title">
+        						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          							<i class="icon icon-laptop"></i>TRAYECTORIA
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      						<div class="panel-body">
+        						<p>Más de 40 años analizando la economia y el contexto para traducirlos en resultados.</p>
+      						</div>
+   						 </div>
+ 					 </div>
+
+    				<div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingTwo">
+      						<h4 class="panel-title">
+        						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          							<i class="icon icon-focus"></i>TRANSPARENCIA
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      						<div class="panel-body">
+        						<p>Experiencia y capacidad logran la impronta de consultora independiente, líder en análisis y resultados.</p>
+      						</div>
+   						 </div>
+ 					 </div>
+
+ 					 <div class="panel panel-default">
+   						<div class="panel-heading" role="tab" id="headingThree">
+      						<h4 class="panel-title">
+        						<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+          							<i class="icon icon-cloud"></i>EFICACIA Y RESULTADOS
+        						</a>
+      						</h4>
+    					</div>
+   						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      						<div class="panel-body">
+        						<p>Focalizados en obtener mejoras concretas para las Empresas e Instituciones.</p>
+      						</div>
+   						 </div>
+ 					 </div>
+
+ 				 </div>
+			</div>
+
+		</div>
+	</div>
+</section>
+-->
+
+<!-- testimonial section
+================================================== 
+<section id="testimonial" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			 Section title
+			================================================== 
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 wow bounceIn text-center">
+				<div class="section-title">
+					<h1></h1>
+					<p></p>
+				</div>
+			</div>
+
+			 Work Owl Carousel section
+			================================================== 
+			<div id="owl-testimonial" class="owl-carousel">
+
+				<div class="item col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<div class="media">
+						<div class="media-object pull-left">
+							<img src="images/testimonial-img1.jpg" class="img-responsive" alt="testimonial">
+						</div>
+						<div class="media-body">
+							<p>Federico Moll</p>
+							<h4 class="media-heading">Coordinador de Modelos y Proyecciones</h4>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+				<div class="item col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<div class="media">
+						<div class="media-object pull-left">
+							<img src="images/testimonial-img2.jpg" class="img-responsive" alt="testimonial">
+						</div>
+						<div class="media-body">
+							<p>Eugenia Arioua</p>
+							<h4 class="media-heading">Analista Económico</h4>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="item col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<div class="media">
+						<div class="media-object pull-left">
+							<img src="images/testimonial-img3.jpg" class="img-responsive" alt="testimonial">
+						</div>
+						<div class="media-body">
+							<p>Ignacio Ruiz</p>
+							<h4 class="media-heading">Analista Económico</h4>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="item col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<div class="media">
+						<div class="media-object pull-left">
+							<img src="images/testimonial-img4.jpg" class="img-responsive" alt="testimonial">
+						</div>
+						<div class="media-body">
+							<p>Luz García Balcarce</p>
+							<h4 class="media-heading">Coordinadora de Análisis Económico</h4>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="item col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<div class="media">
+						<div class="media-object pull-left">
+							<img src="images/testimonial-img5.jpg" class="img-responsive" alt="testimonial">
+						</div>
+						<div class="media-body">
+							<p>Mariángel Ghilardi Sierra</p>
+							<h4 class="media-heading">Coordinadora de Estudios Sectoriales</h4>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="item col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<div class="media">
+						<div class="media-object pull-left">
+							<img src="images/testimonial-img6.jpg" class="img-responsive" alt="testimonial">
+						</div>
+						<div class="media-body">
+							<p>Ignacio Irachet</p>
+							<h4 class="media-heading">Analista Económico</h4>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="item col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<div class="media">
+						<div class="media-object pull-left">
+							<img src="images/testimonial-img7.jpg" class="img-responsive" alt="testimonial">
+						</div>
+						<div class="media-body">
+							<p>Mario Ravazzani</p>
+							<h4 class="media-heading">Director de Relaciones Institucionales</h4>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="item col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<div class="media">
+						<div class="media-object pull-left">
+							<img src="images/testimonial-img8.jpg" class="img-responsive" alt="testimonial">
+						</div>
+						<div class="media-body">
+							<p>Federico Semeniuk </p>
+							<h4 class="media-heading">Gerente de Desarrollo de Negocios</h4>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="item col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<div class="media">
+						<div class="media-object pull-left">
+							<img src="images/testimonial-img9.jpg" class="img-responsive" alt="testimonial">
+						</div>
+						<div class="media-body">
+							<p>Javier Paz</p>
+							<h4 class="media-heading">Gerente de Coordinación</h4>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="item col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<div class="media">
+						<div class="media-object pull-left">
+							<img src="images/testimonial-img10.jpg" class="img-responsive" alt="testimonial">
+						</div>
+						<div class="media-body">
+							<p>SANTIAGO PAZ</p>
+							<h4 class="media-heading">DIRECTOR EJECUTIVO</h4>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="item col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<div class="media">
+						<div class="media-object pull-left">
+							<img src="images/testimonial-img11.jpg" class="img-responsive" alt="testimonial">
+						</div>
+						<div class="media-body">
+							<p>Lorenzo Sigaut Gravina</p>
+							<h4 class="media-heading">Economista Jefe</h4>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="item col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+					<div class="media">
+						<div class="media-object pull-left">
+							<img src="images/testimonial-img12.jpg" class="img-responsive" alt="testimonial">
+						</div>
+						<div class="media-body">
+							<p>Andrés Bonifacio - Director</p>
+							<h4 class="media-heading">Economia y Finanzas</h4>
+							<ul class="social-icon">
+								<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
+								<li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+</section>
+-->
+
+<!-- Contact section
+================================================== -->
+
+
+
+
+<!--Locacion
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d108836.19444512833!2d-68.588325!3d-31.5205597!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96814029a33cd497%3A0xbff3a3a0233cfcb3!2sSan+Juan%2C+Argentina!5e0!3m2!1ses!2sve!4v1534532305374" width="980" height="400" frameborder="0" style="border:10px" allowfullscreen></iframe>
+-->
+
+<section id="contact" class="parallax-section">
+	<div class="container">
+		<div class="row">
+
+			<!-- Section title
+			================================================== -->
+			<div class="col-md-offset-2 col-md-8 col-sm-12">
+				<div class="section-title">
+					<h1>CONTACTANOS</h1>
+					<p>Envianos un correo para mas Información</p>
+				</div>
+			</div>
+
+			<!-- Contact form section
+			================================================== -->
+			<div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 wow fadeIn" data-wow-delay="0.3s">
+				<form action="contact.php" method="post">
+					<div class="col-md-6 col-sm-6">
+						<input type="text" class="form-control" placeholder="Nombre" name="name" required>
+						<input type="email" class="form-control" placeholder="E-mail" name="email" required>
+						<input type="telephone" class="form-control" placeholder="Telefono" name="phone" required>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<textarea class="form-control" placeholder="Mensaje" rows="7" name"message" required></textarea>
+					</div>
+					<div class="col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8">
+						<input type="submit" class="form-control" value="ENVIAR MENSAJE">
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+
+
+<!-- Footer section
+================================================== -->
+<footer>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+				<p>Johan albornoz</p>
+				<ul class="social-icon">
+					<li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+					<li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.3s"></a></li>
+					<li><a href="#" class="fa fa-google-plus wow fadeIn" data-wow-delay="0.3s"></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+</footer>
+
+<!-- Javascript 
+================================================== -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/custom.js"></script>
+<script>
+function openNav() {
+  document.getElementById("myNav_marg").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav_marg").style.height = "0%";
+}
+</script>
+
+</body>
+</html>
